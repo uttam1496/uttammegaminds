@@ -1,0 +1,14 @@
+﻿@model List<SubCategory>
+
+<h2>User Dashboard</h2>
+
+<a href="/Account/Logout">Logout</a>
+
+<h3>Menu</h3>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>

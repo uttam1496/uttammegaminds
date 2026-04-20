@@ -1,0 +1,33 @@
+﻿@model List<User>
+
+<h2>User List</h2>
+
+<a href="/Admin/Create">➕ Add New User</a> |
+<a href="/Admin/Dashboard">Dashboard</a>
+
+<br />
+<br />
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.Name</td>
+            <td>@u.Email</td>
+            <td>@u.Phone</td>
+            <td>@(u.IsAdmin ? "Admin" : "User")</td>
+            <td>
+                <a href="/Admin/Edit/@u.Id">Edit</a> |
+                <a href="/Admin/Delete/@u.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

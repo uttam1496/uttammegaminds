@@ -1,0 +1,32 @@
+﻿@model MegaMindPractical.Models.User
+
+<h2>Edit User</h2>
+
+<form method="post" asp-action="Edit">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Name</label><br />
+    <input name="Name" value="@Model.Name" required /><br /><br />
+
+    <label>Email</label><br />
+    <input name="Email" value="@Model.Email" required /><br /><br />
+
+    <label>Password</label><br />
+    <input name="Password" value="@Model.Password" required /><br /><br />
+
+    <label>Phone</label><br />
+    <input name="Phone" value="@Model.Phone" required /><br /><br />
+
+    <label>Is Admin</label>
+    <input type="checkbox" name="IsAdmin" value="true"
+    @(Model.IsAdmin ? "checked" : "") />
+
+    <br /><br />
+
+    <button type="submit">Update</button>
+
+</form>
+
+<br />
+<a href="/Admin/Index">Back</a>

@@ -1,0 +1,31 @@
+﻿<form method="post" asp-action="Create">
+
+    <label>Name:</label>
+    <input name="Name" required /><br /><br />
+
+    <label>Email:</label>
+    <input name="Email" required /><br /><br />
+
+    <label>Password:</label>
+    <input name="Password" required /><br /><br />
+
+    <label>Phone:</label>
+    <input name="Phone" id="Phone" required /><br /><br />
+
+    <label>Is Admin:</label>
+    <input type="checkbox" name="IsAdmin" value="true" /><br /><br />
+
+    <label>Category:</label>
+    <select name="categoryId" required>
+        <option value="">Select</option>
+        @foreach (var c in ViewBag.Categories)
+        {
+            <option value="@c.Id">@c.Name</option>
+        }
+    </select>
+
+    <br /><br />
+
+    <button type="submit">Save</button>
+
+</form>

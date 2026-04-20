@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+
+    <h2>My Application</h2>
+
+    <hr />
+
+    <!-- Navigation -->
+    <div>
+        <a href="/Account/Login">Login</a> |
+        <a href="/Admin/Index">Admin</a> |
+        <a href="/User/Dashboard">User</a> |
+        <a href="/Account/Logout">Logout</a>
+    </div>
+
+    <hr />
+
+    <!-- Main Content -->
+    <div>
+        @RenderBody()
+    </div>
+
+    <hr />
+
+    <footer>
+        <p>© 2026 My Project</p>
+    </footer>
+
+</body>
+</html>
